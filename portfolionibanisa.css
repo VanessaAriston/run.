@@ -1,0 +1,284 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #f5e2e1;
+    color: #333;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+}
+
+/* Logo */
+header .logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #d44782;
+}
+
+/* Navigation */
+header nav {
+    display: flex;
+    gap: 10px;
+}
+
+header nav a {
+    font-size: 1.2rem;
+    color: #d44782;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Shine GIF */
+header .shine-gif {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 170px;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row; /* Keep everything in a row for desktop */
+    text-align: left;
+    padding: 5rem 2rem;
+    width: 100vw;
+    min-height: 450px;
+    position: relative;
+    background: url('https://i.imgur.com/0QsfmBE.jpeg') no-repeat center center;
+    background-size: cover; /* Make the background cover the entire area */
+}
+
+.hero h1 {
+    font-size: 2rem;
+    color: #d44782;
+    margin-bottom: 1rem;
+  }
+
+/* Profile Image */
+.hero img {
+    width: 350px; /* Bigger profile image */
+    height: 350px;
+    border-radius: 50%;
+    border: 2px solid #ff91a3; /* Thin border */
+    padding: 5px;
+    background-color: rgb(255, 214, 234);
+    margin-right: 2rem; /* Space between image and text */
+}
+
+/* Hero Content */
+.hero .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+    justify-content: center;
+    margin-left: 2rem; /* Space on the left */
+}
+
+/* Buttons */
+.hero .buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero .buttons a {
+    padding: 1rem 2rem;
+    background-color: #ff91a3;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.hero .buttons a:hover {
+    background-color: #fbc4d3;
+    transform: scale(1.05);
+}
+
+/* Cat Heart */
+.hero .cat-heart {
+    width: 50px; /* Smaller cat-heart */
+    height: auto;
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    /* Hero Section Adjustments */
+    .hero {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
+
+    .hero img {
+        width: 250px; /* Smaller profile image */
+        height: 250px;
+        margin-bottom: 1rem;
+    }
+
+    .hero .hero-content {
+        align-items: center; /* Center content */
+    }
+
+    .hero .buttons {
+        display: flex; /* Ensure the flex container is active */
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 1rem; /* Space between buttons */
+        align-items: center; /* Center buttons horizontally */
+        width: 100%; /* Make sure buttons use the full width */
+    }
+
+    .hero .buttons a {
+        width: 80%; /* Limit button width to 80% of the parent container */
+        font-size: 1.2rem;
+        padding: 1rem 0; /* Adjust vertical padding for a better look */
+    }
+
+    .hero .cat-heart {
+        width: 40px; /* Slightly larger for mobile */
+        bottom: -15px;
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Perfect centering */
+       
+    }
+}
+
+/* About Me Section */
+.about-me {
+    padding: 2rem 1rem;
+    background-color: #fbd3da;
+    text-align: center;
+    position: relative;
+    border: 6px dotted #f3758f;
+    width: 100%; /* Ensure the section takes full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+    margin: 0; /* Ensure no margin */
+}
+
+/* Content inside About Me */
+.about-me .cinnamoroll-gif {
+    width: 180px;
+    margin-bottom: 1rem;
+}
+
+.about-me h2 {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+}
+
+.about-me p {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 1rem 0;
+}
+
+.about-me .about-buttons {
+    margin-top: 1rem;
+}
+
+.about-me button {
+    padding: 0.8rem 1.5rem;
+    background-color: #ff91a3;
+    border: none;
+    border-radius: 5px;
+    margin: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.about-me button:hover {
+    background-color: #fbc4d3;
+    transform: scale(1.05);
+}
+
+.about-me .decoration {
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    height: auto;
+}
+
+.about-me .decoration.left {
+    left: 10px;
+}
+
+.about-me .decoration.right {
+    right: 10px;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    .about-me {
+        padding: 2rem 1rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        justify-content: center;
+        align-items: center;
+        width: 100%; /* Ensure it fills the screen */
+        margin: 0; /* Make sure there's no margin */
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    .about-me .cinnamoroll-gif {
+        width: 150px; /* Adjust the size for mobile */
+        margin-bottom: 1rem;
+    }
+
+    .about-me h2 {
+        font-size: 1.6rem; /* Adjust heading size for smaller screens */
+    }
+
+    .about-me p {
+        font-size: 1rem; /* Smaller text for mobile */
+    }
+
+    .about-me .about-buttons {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column; /* Stack the buttons */
+        align-items: center; /* Center buttons horizontally */
+        width: 100%; /* Ensure buttons fill the screen width */
+    }
+
+    .about-me button {
+        width: 80%; /* Adjust button width for mobile */
+        font-size: 1rem;
+        margin: 0.5rem 0; /* Adjust button spacing */
+        padding: 1rem 0; /* Ensure proper padding for mobile */
+    }
+
+    .about-me .decoration {
+        width: 30px; /* Smaller decoration for mobile */
+        bottom: 0;
+    }
+
+    .about-me .decoration.left {
+        left: 5px; /* Adjust left position */
+    }
+
+    .about-me .decoration.right {
+        right: 5px; /* Adjust right position */
+    }
+}
